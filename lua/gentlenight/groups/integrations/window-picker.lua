@@ -1,10 +1,8 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
-    WinPicker = { fg = c.bg, bg = c.brown },
+    WinPicker = { fg = C.bg, bg = C.brown },
   }
 end
 

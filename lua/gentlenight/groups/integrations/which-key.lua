@@ -1,16 +1,14 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
     WhichKey = { link = 'NormalFloat' },
     WhichKeyBorder = { link = 'FloatBorder' },
 
-    WhichKeyGroup = { fg = c.blue },
-    WhichKeySeparator = { fg = c.bluegray },
-    WhichKeyDesc = { fg = c.brown },
-    WhichKeyValue = { fg = c.bluegray },
+    WhichKeyGroup = { fg = C.blue },
+    WhichKeySeparator = { fg = C.bluegray },
+    WhichKeyDesc = { fg = C.brown },
+    WhichKeyValue = { fg = C.bluegray },
   }
 end
 

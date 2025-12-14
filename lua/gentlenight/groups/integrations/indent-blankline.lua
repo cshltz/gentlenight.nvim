@@ -1,11 +1,9 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
-    IblIndent = { fg = c.darkgray },
-    IblScope = { fg = c.fg },
+    IblIndent = { fg = C.darkgray },
+    IblScope = { fg = C.fg },
   }
 end
 

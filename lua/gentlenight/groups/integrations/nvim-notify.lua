@@ -1,26 +1,24 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
-    NotifyBackground = { bg = c.bg },
+    NotifyBackground = { bg = opts.transparent and C.none or C.bg },
 
-    NotifyERRORBorder = { fg = c.red },
-    NotifyERRORIcon = { fg = c.red },
-    NotifyERRORTitle = { fg = c.red, italic = true },
-    NotifyWARNBorder = { fg = c.yellow },
-    NotifyWARNIcon = { fg = c.yellow },
-    NotifyWARNTitle = { fg = c.yellow, italic = true },
-    NotifyINFOBorder = { fg = c.blue },
-    NotifyINFOIcon = { fg = c.blue },
-    NotifyINFOTitle = { fg = c.blue, italic = true },
-    NotifyDEBUGBorder = { fg = c.darkmauve },
-    NotifyDEBUGIcon = { fg = c.darkmauve },
-    NotifyDEBUGTitle = { fg = c.darkmauve, italic = true },
-    NotifyTRACEBorder = { fg = c.orchid },
-    NotifyTRACEIcon = { fg = c.orchid },
-    NotifyTRACETitle = { fg = c.orchid, italic = true },
+    NotifyERRORBorder = { fg = C.red },
+    NotifyERRORIcon = { fg = C.red },
+    NotifyERRORTitle = { fg = C.red, italic = true },
+    NotifyWARNBorder = { fg = C.yellow },
+    NotifyWARNIcon = { fg = C.yellow },
+    NotifyWARNTitle = { fg = C.yellow, italic = true },
+    NotifyINFOBorder = { fg = C.blue },
+    NotifyINFOIcon = { fg = C.blue },
+    NotifyINFOTitle = { fg = C.blue, italic = true },
+    NotifyDEBUGBorder = { fg = C.darkmauve },
+    NotifyDEBUGIcon = { fg = C.darkmauve },
+    NotifyDEBUGTitle = { fg = C.darkmauve, italic = true },
+    NotifyTRACEBorder = { fg = C.orchid },
+    NotifyTRACEIcon = { fg = C.orchid },
+    NotifyTRACETitle = { fg = C.orchid, italic = true },
   }
 end
 

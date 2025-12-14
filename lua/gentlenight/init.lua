@@ -1,46 +1,80 @@
-local M = {}
+local M = {
+  default_options = {
+    italic_comment = false,
+    transparent = false,
+    style = 'dusk',
+    integrations = {
+      'gitsigns',
+      'blink-cmp',
+      'nvim-tree',
+      'window-picker',
+      'which-key',
+      'diffview',
+      'nvim-notify',
+      'dap',
+      'dap-ui',
+      'window-picker',
+      'snacks',
+    },
+  },
+}
+M.opts = M.default_options
 
 local TRANSPARENTS = {
   'Normal',
+  'NormalFloat',
   'SignColumn',
   'NvimTreeNormal',
   'NvimTreeVertSplit',
 }
 
-local function apply_term_colors(c)
-  vim.g.terminal_color_0 = c.black
-  vim.g.terminal_color_8 = c.selection
+local function set_styles(style)
+  local day = require 'gentlenight.styles.day'
+  local dusk = require 'gentlenight.styles.dusk'
+  local darkness = require 'gentlenight.styles.darkness'
 
-  vim.g.terminal_color_1 = c.red
-  vim.g.terminal_color_9 = c.red
+  if style == 'day' then
+    C = day
+    vim.o.background = 'light'
+  elseif style == 'darkness' then
+    C = darkness
+    vim.o.background = 'dark'
+  else
+    C = dusk
+    vim.o.background = 'dark'
+  end
 
-  vim.g.terminal_color_2 = c.green
-  vim.g.terminal_color_10 = c.green
+  vim.g.terminal_color_0 = C.black
+  vim.g.terminal_color_8 = C.selection
 
-  vim.g.terminal_color_3 = c.yellow
-  vim.g.terminal_color_11 = c.yellow
+  vim.g.terminal_color_1 = C.red
+  vim.g.terminal_color_9 = C.red
 
-  vim.g.terminal_color_4 = c.blue
-  vim.g.terminal_color_12 = c.blue
+  vim.g.terminal_color_2 = C.green
+  vim.g.terminal_color_10 = C.green
 
-  vim.g.terminal_color_5 = c.orchid
-  vim.g.terminal_color_13 = c.orchid
+  vim.g.terminal_color_3 = C.yellow
+  vim.g.terminal_color_11 = C.yellow
 
-  vim.g.terminal_color_6 = c.teal
-  vim.g.terminal_color_14 = c.teal
+  vim.g.terminal_color_4 = C.blue
+  vim.g.terminal_color_12 = C.blue
 
-  vim.g.terminal_color_7 = c.fg
-  vim.g.terminal_color_15 = c.fg
+  vim.g.terminal_color_5 = C.orchid
+  vim.g.terminal_color_13 = C.orchid
 
-  vim.g.terminal_color_background = c.bg
-  vim.g.terminal_color_foreground = c.fg
+  vim.g.terminal_color_6 = C.teal
+  vim.g.terminal_color_14 = C.teal
+
+  vim.g.terminal_color_7 = C.fg
+  vim.g.terminal_color_15 = C.fg
+
+  vim.g.terminal_color_background = C.bg
+  vim.g.terminal_color_foreground = C.fg
 end
 
 local function apply(opts)
-  local colors = require 'gentlenight.palette'
-  apply_term_colors(colors)
-
-  local groups = require('gentlenight.groups').get(opts.integrations)
+  set_styles(opts.style)
+  local groups = require('gentlenight.groups').get(opts)
 
   -- apply transparents
   if opts.transparent then
@@ -55,25 +89,8 @@ local function apply(opts)
   end
 end
 
-M.opts = {
-  italic_comment = false,
-  transparent = false,
-  integrations = {
-    'gitsigns',
-    'indent-blankline',
-    'nvim-cmp',
-    'nvim-tree',
-    'window-picker',
-    'telescope',
-    'which-key',
-    'neogit',
-    'diffview',
-    'nvim-notify',
-  },
-}
-
 M.setup = function(opts)
-  M.opts = vim.tbl_deep_extend('force', M.opts, opts or {})
+  M.opts = vim.tbl_deep_extend('force', M.default_options, opts or {})
 end
 
 M.load = function()
@@ -91,7 +108,6 @@ M.load = function()
     vim.cmd 'syntax reset'
   end
 
-  vim.o.background = 'dark'
   vim.o.termguicolors = true
   vim.g.colors_name = 'gentlenight'
 

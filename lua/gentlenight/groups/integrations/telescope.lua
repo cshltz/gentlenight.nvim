@@ -1,8 +1,6 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
     TelescopeBorder = { link = 'FloatBorder' },
     TelescopeNormal = { link = 'Normal' },
@@ -10,15 +8,15 @@ M.get = function()
     TelescopePromptNormal = { link = 'TelescopeNormal' },
     TelescopeResultsNormal = { link = 'TelescopeNormal' },
     TelescopeTitle = { link = 'TelescopeBorder' },
-    TelescopeSelectionCaret = { fg = c.brown },
+    TelescopeSelectionCaret = { fg = C.brown },
     TelescopeSelection = {
-      fg = c.selection,
+      fg = C.selection,
     },
     TelescopePreviewLine = {
       link = 'TelescopeSelection',
     },
-    TelescopeMatching = { fg = c.brown },
-    TelescopePromptPrefix = { fg = c.brown },
+    TelescopeMatching = { fg = C.brown },
+    TelescopePromptPrefix = { fg = C.brown },
   }
 end
 

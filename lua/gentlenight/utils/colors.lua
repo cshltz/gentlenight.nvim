@@ -33,6 +33,14 @@ function M.blend(fg, bg, alpha)
   return string.format('#%02X%02X%02X', blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
+function M.blend_bg(hex, amount, bg)
+  return M.blend(hex, bg or M.bg, amount)
+end
+
+function M.blend_fg(hex, amount, fg)
+  return M.blend(hex, fg or M.fg, amount)
+end
+
 function M.darken(hex, amount, bg)
   return M.blend(hex, bg or M.bg, math.abs(amount))
 end

@@ -1,11 +1,9 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
-    CmpItemAbbr = { fg = c.white, bg = c.bg },
-    CmpItemKind = { fg = c.white, bg = c.bg },
+    CmpItemAbbr = { fg = C.white, bg = C.bg },
+    CmpItemKind = { fg = C.white, bg = C.bg },
     CmpItemKindMethod = { link = '@method' },
     CmpItemKindText = { link = '@text' },
     CmpItemKindFunction = { link = '@function' },

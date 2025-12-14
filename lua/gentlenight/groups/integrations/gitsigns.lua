@@ -1,16 +1,14 @@
 local M = {}
 
-local c = require 'gentlenight.palette'
-
-M.get = function()
+M.get = function(opts)
   return {
-    GitSignsAdd = { fg = c.green },
-    GitSignsChange = { fg = c.orange },
-    GitSignsDelete = { fg = c.red },
-    GitSignsAddLn = { fg = c.black, bg = c.brown },
-    GitSignsChangeLn = { fg = c.black, bg = c.orange },
-    GitSignsDeleteLn = { fg = c.black, bg = c.crimson },
-    GitSignsCurrentLineBlame = { fg = c.white },
+    GitSignsAdd = { fg = C.green },
+    GitSignsChange = { fg = C.orange },
+    GitSignsDelete = { fg = C.red },
+    GitSignsAddLn = { fg = C.black, bg = C.brown },
+    GitSignsChangeLn = { fg = C.black, bg = C.orange },
+    GitSignsDeleteLn = { fg = C.black, bg = C.crimson },
+    GitSignsCurrentLineBlame = { fg = C.white },
   }
 end
 
