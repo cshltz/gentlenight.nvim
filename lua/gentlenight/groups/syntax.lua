@@ -5,7 +5,7 @@ M.get = function()
     Comment = { fg = C.darkgray, italic = true },
     SpecialComment = { fg = C.darkgray, italic = true },
     String = { fg = C.olivegreen },
-    Character = { fg = C.fg },
+    Character = { fg = C.olivegreen },
     Number = { fg = C.brown },
     Float = { fg = C.brown },
     Boolean = { fg = C.bluegray },

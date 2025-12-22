@@ -16,7 +16,7 @@ M.get = function()
     ['@string.xml'] = { fg = C.fg },
     ['@string.regex'] = { fg = C.red },
     ['@string.escape'] = { fg = C.lightblue },
-    ['@character'] = { fg = C.fg },
+    ['@character'] = { fg = C.olivegreen },
     ['@number'] = { fg = C.brown },
     ['@boolean'] = { fg = C.bluegray },
     ['@float'] = { fg = C.brown },
@@ -40,8 +40,6 @@ M.get = function()
     ['@label'] = { fg = C.yellow },
 
     ['@keyword'] = { fg = C.bluegray, bold = true },
-    ['@keyword.function'] = { fg = C.teal },
-    ['@keyword.function.ruby'] = { fg = C.teal },
     ['@keyword.operator'] = { fg = C.darkmauve },
     ['@keyword.conditional'] = { fg = C.darkredorange },
     ['@keyword.repeat'] = { fg = C.darkredorange },
@@ -50,13 +48,13 @@ M.get = function()
     ['@operator'] = { fg = C.darkmauve },
     ['@exception'] = { fg = C.crimson },
     ['@type'] = { fg = C.bluegray },
-    ['@type.builtin'] = { fg = C.lightblue, italic = true },
+    ['@type.builtin'] = { fg = C.bluegray, italic = true },
     ['@type.qualifier'] = { fg = C.blue },
     ['@structure'] = { fg = C.yellow },
     ['@include'] = { fg = C.bluegray },
 
     ['@variable'] = { fg = C.white },
-    ['@variable.builtin'] = { fg = C.white },
+    ['@variable.builtin'] = { fg = C.bluegray },
 
     ['@text'] = { fg = C.brown },
     ['@text.strong'] = { fg = C.brown, bold = true },
