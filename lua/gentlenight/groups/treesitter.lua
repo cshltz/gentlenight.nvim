@@ -69,6 +69,8 @@ M.get = function()
     ['@tag.attribute'] = { fg = C.lightblue },
     ['@tag.delimiter'] = { fg = C.fg },
 
+    ['@module'] = { fg = C.teal },
+
     -- LUA
     ['@constructor.lua'] = { fg = C.fg },
     ['@variable.parameter.lua'] = { fg = C.blue },
