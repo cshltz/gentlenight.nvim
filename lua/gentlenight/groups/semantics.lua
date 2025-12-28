@@ -34,6 +34,7 @@ M.get = function()
     ['@lsp.type.event'] = { fg = C.orange },
     ['@lsp.type.delegate'] = { fg = C.orange },
     ['@lsp.type.extensionMethod'] = { fg = C.darkgray },
+    ['@lsp.type.excludedCode'] = { link = 'Comment' },
 
     ['@lsp.mod.global'] = { fg = C.darkmauve },
     ['@lsp.typemod.variable.global'] = { fg = C.orchid },

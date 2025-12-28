@@ -1,5 +1,7 @@
 local M = {}
 
+local u = require 'gentlenight.utils.colors'
+
 M.get = function()
   return {
     Comment = { fg = C.darkgray, italic = true },
@@ -34,6 +36,10 @@ M.get = function()
     Keyword = { fg = C.bluegray },
     Keywords = { fg = C.bluegray },
 
+    --Inline Suggestions
+    CmpGhostText = { fg = C.darkgray, italic = true },
+    CopilotSuggestion = { fg = C.darkgray, italic = true },
+
     -- Neovim
     healthError = { fg = C.red },
     healthSuccess = { fg = C.green },
@@ -41,20 +47,21 @@ M.get = function()
 
     --  Diff
     Added = { fg = C.green },
-    Changed = { fg = C.orange },
+    Changed = { fg = C.blue },
+
     diffAdded = { fg = C.green },
     diffRemoved = { fg = C.red },
-    diffChanged = { fg = C.orange },
+    diffChanged = { fg = C.blue },
+
+    DiffAdd = { bg = u.darken(C.green, 0.2, C.bg) },
+    DiffDelete = { bg = u.darken(C.red, 0.2, C.bg) },
+    DiffChange = { bg = u.darken(C.blue, 0.15, C.bg) },
+    DiffText = { bg = u.darken(C.blue, 0.3, C.bg) },
 
     diffFileId = { fg = C.yellow, bold = true, reverse = true },
     diffOldFile = { fg = C.yellow },
     diffNewFile = { fg = C.darkmauve },
     diffFile = { fg = C.darkgray },
-
-    DiffAdd = { fg = C.green },
-    DiffChange = { fg = C.orange },
-    DiffDelete = { fg = C.red },
-    DiffText = { fg = C.yellow },
 
     debugPc = { bg = C.menu_bg },
     debugBreakpoint = { fg = C.red, reverse = true },

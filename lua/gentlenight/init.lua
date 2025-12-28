@@ -29,20 +29,8 @@ local TRANSPARENTS = {
 }
 
 local function set_styles(style)
-  local day = require 'gentlenight.styles.day'
-  local dusk = require 'gentlenight.styles.dusk'
-  local darkness = require 'gentlenight.styles.darkness'
-
-  if style == 'day' then
-    C = day
-    vim.o.background = 'light'
-  elseif style == 'darkness' then
-    C = darkness
-    vim.o.background = 'dark'
-  else
-    C = dusk
-    vim.o.background = 'dark'
-  end
+  C = require 'gentlenight.styles.dusk'
+  vim.o.background = 'dark'
 
   vim.g.terminal_color_0 = C.black
   vim.g.terminal_color_8 = C.selection

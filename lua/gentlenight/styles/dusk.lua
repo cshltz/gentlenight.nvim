@@ -25,7 +25,7 @@ return {
   --UI
   bg = '#292d3e',
   fg = '#dcdcdc',
-  selection = '#5e5f61',
+  selection = '#333851',
   statusline = '#963e3e',
   menu_bg = '#2d3144',
   menu_sel = '#4d5478',
