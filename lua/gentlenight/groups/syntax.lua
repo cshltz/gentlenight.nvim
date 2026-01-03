@@ -51,8 +51,8 @@ M.get = function()
 
     DiffAdd = { bg = u.darken(C.green, 0.2, C.bg) },
     DiffDelete = { bg = u.darken(C.red, 0.2, C.bg) },
-    DiffChange = { bg = u.darken(C.blue, 0.2, C.bg) },
-    DiffText = { fg = C.blue, reverse = true },
+    DiffChange = { bg = u.darken(C.blue, 0.15, C.bg) },
+    DiffText = { bg = u.darken(C.blue, 0.3, C.bg) },
 
     diffFileId = { fg = C.yellow, bold = true, reverse = true },
     diffOldFile = { fg = C.yellow },
