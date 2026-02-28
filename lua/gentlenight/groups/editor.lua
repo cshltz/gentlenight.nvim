@@ -27,6 +27,7 @@ M.get = function()
     ErrorMsg = { fg = C.crimson },
     VertSplit = { fg = C.black },
     WinBar = { fg = C.bg },
+    WinBarNC = { link = 'WinBar' },
     WinNc = { fg = C.bg },
     WinSeparator = { fg = C.bg },
     Folded = { fg = C.darkgray },
