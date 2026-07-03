@@ -79,6 +79,7 @@ M.get = function()
     ['@variable.parameter.python'] = { link = '@parameter' },
     ['@variable.member.python'] = { link = '@property' },
     ['@type.python'] = { link = '@class' },
+    ['@string.documentation.python'] = { link = 'SpecialComment' },
   }
 end
 
