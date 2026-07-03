@@ -14,7 +14,6 @@ M.get = function()
     ['@typeParameter'] = { fg = C.red },
     ['@decorator'] = { fg = C.lightblue },
 
-    -- LSP Semantic (0.9+)
     ['@lsp.type.class'] = { fg = C.purple },
     ['@lsp.type.enum'] = { fg = C.yellow },
     ['@lsp.type.decorator'] = { fg = C.lightblue },
@@ -38,6 +37,10 @@ M.get = function()
 
     ['@lsp.mod.global'] = { fg = C.darkmauve },
     ['@lsp.typemod.variable.global'] = { fg = C.orchid },
+
+    -- PYTHON
+    ['@lsp.mod.documentation.python'] = { link = 'SpecialComment' },
+    ['@lsp.typemod.documentation.python'] = { link = 'SpecialComment' },
   }
 end
 
