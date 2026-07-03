@@ -73,7 +73,12 @@ M.get = function()
 
     -- LUA
     ['@constructor.lua'] = { fg = C.fg },
-    ['@variable.parameter.lua'] = { fg = C.blue },
+    ['@variable.parameter.lua'] = { link = '@parameter' },
+
+    -- PYTHON
+    ['@variable.parameter.python'] = { link = '@parameter' },
+    ['@variable.member.python'] = { link = '@property' },
+    ['@type.python'] = { link = '@class' },
   }
 end
 
